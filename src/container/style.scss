@@ -4,6 +4,8 @@ $navy: #02344a;
 
 $darkNavy: #072a3b;
 
+$lightNavy:#337ab7;
+
 .headerTop {
   padding: 7px 50px !important;
   border-bottom: 1px solid $lightGray;
@@ -102,10 +104,12 @@ $darkNavy: #072a3b;
         position: relative;
 
         &:hover {
+          background: $darkNavy;
+
         }
 
         a {
-          padding: 5px 30px;
+          padding: 5px 40px;
           color: oldlace;
           display: inline-block;
 
@@ -117,14 +121,14 @@ $darkNavy: #072a3b;
 
       li:hover .submenu {
         display: block;
-        background: $navy;
+        background: $darkNavy;
 
         li:hover {
-          background: $darkNavy;
+          background: $lightNavy;
         }
       }
 
-      li > ul {
+      li>ul {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -134,6 +138,7 @@ $darkNavy: #072a3b;
         li {
           a {
             color: #fff;
+            padding: 0 60px;
           }
         }
       }
