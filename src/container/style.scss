@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 30px !important;
+
+  .navbarWrp {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+}
