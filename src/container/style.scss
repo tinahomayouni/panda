@@ -1,11 +1,142 @@
-.header {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 10px 30px !important;
+$lightGray: #f0f0f0;
+
+$navy: #02344a;
+
+$darkNavy: #072a3b;
+
+.headerTop {
+  padding: 7px 50px !important;
+  border-bottom: 1px solid $lightGray;
+  margin-bottom: 30px;
 
   .navbarWrp {
     list-style: none;
     padding: 0;
     display: flex;
+    margin: 0;
+    flex-direction: row-reverse;
+
+    li {
+      margin: 0 10px;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: gray;
+        text-decoration: none;
+        font: 0.875rem;
+
+        &:hover {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  .topBar {
+    span {
+      padding: 20px 0;
+      vertical-align: middle;
+      font-size: 1.6em;
+      color: gray;
+      padding-left: 15px;
+      border-right: 1px solid $lightGray;
+      padding-right: 10px;
+
+      &:last-child {
+        font-size: 0.7rem;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+      }
+    }
+  }
+
+  .holder {
+    padding: 20px 0;
+    vertical-align: middle;
+    line-height: 30px;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      margin-right: 10px;
+      color: gray;
+    }
+  }
+
+  button {
+    float: right;
+    margin: 20px 0;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    width: 60%;
+    line-height: normal;
+
+    svg {
+      margin-left: 10px;
+      text-align: center;
+    }
+  }
+
+  nav {
+    width: 100%;
+    padding: 0;
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background: $navy;
+      width: 100%;
+
+      li {
+        position: relative;
+
+        &:hover {
+        }
+
+        a {
+          padding: 5px 30px;
+          color: oldlace;
+          display: inline-block;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      li:hover .submenu {
+        display: block;
+        background: $navy;
+
+        li:hover {
+          background: $darkNavy;
+        }
+      }
+
+      li > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        display: none;
+
+        li {
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
