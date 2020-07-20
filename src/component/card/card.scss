@@ -26,7 +26,6 @@ $blue:#337ab7;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
 
-
         span {
           background-color: $grayDark;
           bottom: 15px;
@@ -37,6 +36,21 @@ $blue:#337ab7;
           padding: 8px 12px;
           position: absolute;
         }
+
+        .featured {
+          background-color: #fff;
+          border-radius: 0;
+          color: #313131;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1;
+          padding: 8px 12px;
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          bottom: auto;
+        }
+
 
         img {
           width: 100%;
@@ -70,8 +84,8 @@ $blue:#337ab7;
           justify-content: space-between;
 
           .rightOption {
-            svg:last-child {
-              background: red;
+            .bathQuantity {
+              padding-right: 15px;
             }
           }
 
@@ -91,6 +105,6 @@ $blue:#337ab7;
   }
 
   aside {
-    background: red;
+    padding: 0 15px;
   }
 }

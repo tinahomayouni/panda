@@ -26,7 +26,6 @@
       "category": "Building area",
       "title": "Apricot West Britford Arch",
       "squareFootage": "180 sqft",
-      "featured": "featured",
       "image": "home.jpg",
       "option": [{ "shower": 1 }, { "room": 2 }],
       "price": 1098708.58
@@ -56,7 +55,6 @@
       "category": "Apartment",
       "title": "Eaton Garth",
       "squareFootage": "150 sqft",
-      "featured": "featured",
       "image": "home.jpg",
       "option": [{ "shower": 2 }, { "room": 3 }],
       "price": 45.58

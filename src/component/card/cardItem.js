@@ -8,7 +8,9 @@ function CardItem(props) {
     <div className="cartItem">
       <div className="imgWrp">
         <img src={`/imgs/${props.house.image}`} alt={props.house.alt} />
-        <span>{props.house.price}</span>
+        <span className="price">{props.house.price}</span>
+        <span className={`${!!props.house.featured ? "featured" : ""}`}>{props.house.featured}</span>
+
       </div>
       <div className="txtWrp">
         <h3>{props.house.title}</h3>
