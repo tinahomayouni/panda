@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './header/header'
 import Footer from './footer'
 // import MapHolder from '../component/map/mapHolder'
-import Card from '../component/card/card'
+import HouseListingWrp from '../component/card/houseListingWrp'
 
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
       <Header />
 
       {/* <MapHolder/> */}
-      <Card />
+      <HouseListingWrp />
       <Footer />
     </div>
   )
