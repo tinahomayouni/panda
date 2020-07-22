@@ -1,29 +1,33 @@
-import React from 'react'
+import React from 'react';
 import { Col } from 'react-bootstrap';
-import data from '../../data/dataCard/dataCard.json'
+import data from '../../data/dataCard/dataCard.json';
 
 function Sidebar() {
+  let uniquFilter = [];
+  data.houses.forEach(house => {
+    house.option.forEach(opt => {
+      const key = Object.keys(opt)[0];
+      if (!uniquFilter.includes(key)) {
+        uniquFilter.push(key);
+      }
+    });
+  });
+  function selector() {
+    alert('changed!!');
+  }
+
   return (
     <Col xs={4}>
       <aside>
-        <select name="cars" id="cars">
-          {data.houses.map(house => {
-            return (
-              house.option.map((op, i) => {
-                return (
-                  <option key={i}>{
-                    Object.keys(op)
-
-
-                  }</option>
-                )
-              })
-            )
+        <select onChange={selector}>
+          <option>Choose!</option>
+          {uniquFilter.map((opt, index) => {
+            return <option key={index}>{opt}</option>;
           })}
         </select>
       </aside>
     </Col>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar; 

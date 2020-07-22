@@ -10,7 +10,6 @@ function HouseItem(props) {
         <img src={`/imgs/${props.house.image}`} alt={props.house.alt} />
         <span className="price">{props.house.price}</span>
         <span className={`${!!props.house.featured ? "featured" : "noFeatured"}`}>{props.house.featured}</span>
-
       </div>
       <div className="txtWrp">
         <h3>{props.house.title}</h3>
