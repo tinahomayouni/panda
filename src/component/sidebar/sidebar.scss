@@ -1,0 +1,41 @@
+aside {
+  display: flex !important;
+  background: #06a7ea;
+  height: 100%;
+  padding: 30px !important;
+  flex-direction: column;
+  margin-left: 30px;
+  border-radius: 5px;
+
+  label {
+    display: inline-block;
+    max-width: 100vh;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.42857;
+  }
+
+  select {
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    outline: 0;
+    height: 40px;
+    padding: 6px 8px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    background: #fff;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background: #034563;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.42857;
+    border: 1px solid #0f4562;
+    padding: 10px;
+  }
+}

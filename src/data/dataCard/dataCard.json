@@ -8,7 +8,7 @@
       "featured": "featured",
       "image": "home.jpg",
       "alt": "image from Home",
-      "option": [{ "shower": 2 }, { "room": 4 }],
+      "option": [{ "room": 4 }],
       "price": 5.11
     },
     {
@@ -37,7 +37,7 @@
       "squareFootage": "230 sqft",
       "featured": "featured",
       "image": "home.jpg",
-      "option": [{ "shower": 4 }, { "room": 3 }],
+      "option": [{ "room": 3 }],
       "price": 35442.58
     },
     {
