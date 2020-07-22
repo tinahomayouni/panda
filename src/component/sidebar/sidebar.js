@@ -5,7 +5,7 @@ import "./sidebar.scss"
 
 function Sidebar() {
   const [options, setOptions] = useState('')
-
+  const [categories, setCategories] = useState('')
 
   let uniquFilter = [];
   let category = [];
@@ -23,7 +23,7 @@ function Sidebar() {
   });
 
   function doFilter() {
-    console.log(options)
+    console.log(options, 'options', categories, 'categories')
 
   }
   return (
@@ -38,7 +38,7 @@ function Sidebar() {
         </select>
 
         <label>Category:</label>
-        <select>
+        <select onChange={(e) => setCategories(e.target.value)}>
           <option>Choose!</option>
           {category.map(gt => {
             return <option>{gt}</option>
