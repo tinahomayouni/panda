@@ -2,14 +2,14 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVectorSquare, faBath, faBed } from '@fortawesome/free-solid-svg-icons'
 
-function CardItem(props) {
+function HouseItem(props) {
   return (
     // {props.product.id}
     <div className="cartItem">
       <div className="imgWrp">
         <img src={`/imgs/${props.house.image}`} alt={props.house.alt} />
         <span className="price">{props.house.price}</span>
-        <span className={`${!!props.house.featured ? "featured" : ""}`}>{props.house.featured}</span>
+        <span className={`${!!props.house.featured ? "featured" : "noFeatured"}`}>{props.house.featured}</span>
 
       </div>
       <div className="txtWrp">
@@ -43,4 +43,4 @@ function CardItem(props) {
   )
 }
 
-export default CardItem
+export default HouseItem

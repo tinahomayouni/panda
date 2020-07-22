@@ -9,20 +9,21 @@ function Sidebar() {
         <select name="cars" id="cars">
           {data.houses.map(house => {
             return (
-              house.option.map(op => {
+              house.option.map((op, i) => {
                 return (
-                  <option>{}</option>
+                  <option key={i}>{
+                    Object.keys(op)
+
+
+                  }</option>
                 )
               })
-
             )
-
           })}
         </select>
       </aside>
     </Col>
   )
-
 }
 
 export default Sidebar

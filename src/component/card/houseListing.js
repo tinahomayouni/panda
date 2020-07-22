@@ -1,5 +1,5 @@
 import React from 'react'
-import CardItem from './cardItem'
+import HouseItem from './houseItem'
 import { Row, Col } from 'react-bootstrap';
 import data from "../../data/dataCard/dataCard.json";
 
@@ -12,7 +12,7 @@ function HouseListing() {
           {data.houses.map(house => {
             return (
               <Col xs={4}>
-                <CardItem house={house} />
+                <HouseItem house={house} />
               </Col>
             )
           })}
