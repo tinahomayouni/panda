@@ -38,7 +38,7 @@ select::-ms-expand {
 
 export default function SelectBox(props) {
   return (
-    <StyledSelectBox>
+    <StyledSelectBox onChange={(e) => props.onChange(e.target.value)}>
       {
         props.label ?
           <Label>
@@ -46,10 +46,9 @@ export default function SelectBox(props) {
           </Label>
           : null
       }
-      <select>
-        <option value="none" selected disabled>select</option>
-        <Option></Option>
-      </select>
+      <option value={undefined} selected disabled>select</option>
+
+      {props.children}
       <span class="icon_arrow"></span>
     </StyledSelectBox>
   )

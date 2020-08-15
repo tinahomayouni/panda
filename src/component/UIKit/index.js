@@ -4,6 +4,8 @@ import Text from './Text/Text';
 import Checkbox from './Checkbox/Checkbox';
 import Switch from "./Switch/Switch";
 import SelectBox from "./SelectBox/SelectBox";
+import Option from "./Option/Option";
+
 
 export {
   Label,
@@ -11,5 +13,6 @@ export {
   Checkbox,
   Text,
   Switch,
-  SelectBox
+  SelectBox,
+  Option
 };
