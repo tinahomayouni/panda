@@ -1,0 +1,1 @@
+export const FILTER_HOUSES = 'FILTER_HOUSES'
