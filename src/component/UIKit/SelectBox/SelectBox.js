@@ -35,7 +35,6 @@ select::-ms-expand {
   margin-top:-7px;
 }
 `
-
 export default function SelectBox(props) {
   return (
     <StyledSelectBox onChange={(e) => props.onChange(e.target.value)}>

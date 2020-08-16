@@ -22,6 +22,8 @@ const initialState = {
 
 
 function reducerAddress(state = initialState, action) {
+  console.log(action)
+
   switch (action.type) {
     case FILTER_ADDRESS:
       return {

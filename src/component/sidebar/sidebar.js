@@ -10,32 +10,51 @@ import "./sidebar.scss"
 
 function Sidebar() {
   const { filters: hasFilter } = useSelector(state => state.reducerAddress)
+  const [withImageOnly, setWithImageOnly] = useState(false);
+  const [fullMortgage, setFullMortgage] = useState(false);
 
-  const [withImageOnly, setWithImageOnly] = useState(false)
-  const [fullMortgage, setFullMortgage] = useState(false)
-  const [minMortgate, setMinMortgate] = useState(undefined)
-  const [room, setRoom] = useState(undefined)
+  const [room, setRoom] = useState(undefined);
+  const [rent, setRent] = useState({ min: undefined, max: undefined });
+  const [mortgage, setMortgage] = useState({ min: undefined, max: undefined });
 
+  const dispatch = useDispatch();
 
-  console.log(hasFilter, 'hasImages');
-
-  const dispatch = useDispatch()
   useEffect(() => {
-    if (!!hasFilter) {
-      dispatch(filterAddress({ fullMortgage, room, minMortgate }))
-      console.log({ fullMortgage }, 'full')
-      console.log(room, 'room')
+    setFilters();
 
-      console.log(hasFilter, 'hasFilter')
-    }
-  }, [fullMortgage, room, minMortgate])
+  }, [withImageOnly, fullMortgage, room, rent.max, rent.min, mortgage.max, mortgage.min])
 
-  const items = []
+
+  const setFilters = () => {
+
+    console.log({
+      budget: {
+        mortgage,
+        rent
+      }
+    })
+    dispatch(filterAddress({
+      withImageOnly,
+      fullMortgage,
+      room,
+      budget: {
+        mortgage,
+        rent
+      }
+    }))
+  }
+  const items = [];
   for (let i = 0; i < 3; i++) {
     items.push(<Button key={i} variant="secondary" value={i}>{i}</Button>)
   }
 
-  console.log(minMortgate)
+  console.log(hasFilter, 'hasFilter');
+  console.log({
+    budget: {
+      mortgage,
+      rent
+    }
+  })
   return (
     <Col xs={4}>
       <aside>
@@ -50,7 +69,25 @@ function Sidebar() {
             <Button variant="secondary" value="undefined">مهم نیست</Button>
             {items}
           </ButtonGroup>
-          <SelectBox onChange={setMinMortgate}>
+          <span>mortgage:</span>
+          <span>min</span>
+          <SelectBox onChange={(value) => setMortgage({ min: value, max: mortgage.max })}> 
+            <Option value="alpha">alpha</Option>
+            <Option value="beta">abeta</Option>
+          </SelectBox>
+          <span>max</span>
+          <SelectBox onChange={(value) => setMortgage({ min: mortgage.min , max: value})}>
+            <Option value="alpha">alpha</Option>
+            <Option value="beta">abeta</Option>
+          </SelectBox>
+          <span>rent:</span>
+          <span>min</span>
+          <SelectBox onChange={(value) => setRent({ min: value, max: rent.max })}>
+            <Option value="alpha">alpha</Option>
+            <Option value="beta">abeta</Option>
+          </SelectBox>
+          <span>max</span>
+          <SelectBox onChange={(value) => setRent({ min: rent.min , max :value })}>
             <Option value="alpha">alpha</Option>
             <Option value="beta">abeta</Option>
           </SelectBox>
