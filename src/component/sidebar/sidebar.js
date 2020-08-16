@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { filterAddress } from '../../redux/addressFilters/action';
-import { Input, Checkbox, Switch, SelectBox, Option } from '../UIKit';
+import { Input, Checkbox, Switch, DoubleSelect } from '../UIKit';
 import { ButtonGroup, Button } from 'react-bootstrap'
-import { Col } from 'react-bootstrap';
 import "./sidebar.scss"
 
 
@@ -48,53 +47,28 @@ function Sidebar() {
     items.push(<Button key={i} variant="secondary" value={i}>{i}</Button>)
   }
 
-  console.log(hasFilter, 'hasFilter');
-  console.log({
-    budget: {
-      mortgage,
-      rent
-    }
-  })
   return (
-    <Col xs={4}>
-      <aside>
-        <form>
-          <Switch labels={["with pic", 'no']} onChange={setWithImageOnly} />
-          <Checkbox
-            className="beta"
-            label="Full Mortgage"
-            onChange={setFullMortgage}
-          />
-          <ButtonGroup aria-label="Basic example" onClick={(e) => setRoom(e.target.value)}>
-            <Button variant="secondary" value="undefined">مهم نیست</Button>
-            {items}
-          </ButtonGroup>
-          <span>mortgage:</span>
-          <span>min</span>
-          <SelectBox onChange={(value) => setMortgage({ min: value, max: mortgage.max })}> 
-            <Option value="alpha">alpha</Option>
-            <Option value="beta">abeta</Option>
-          </SelectBox>
-          <span>max</span>
-          <SelectBox onChange={(value) => setMortgage({ min: mortgage.min , max: value})}>
-            <Option value="alpha">alpha</Option>
-            <Option value="beta">abeta</Option>
-          </SelectBox>
-          <span>rent:</span>
-          <span>min</span>
-          <SelectBox onChange={(value) => setRent({ min: value, max: rent.max })}>
-            <Option value="alpha">alpha</Option>
-            <Option value="beta">abeta</Option>
-          </SelectBox>
-          <span>max</span>
-          <SelectBox onChange={(value) => setRent({ min: rent.min , max :value })}>
-            <Option value="alpha">alpha</Option>
-            <Option value="beta">abeta</Option>
-          </SelectBox>
-        </form>
-      </aside>
-    </Col>
+    <aside>
+      <form>
+        <Switch labels={["with pic", 'no']} onChange={setWithImageOnly} />
+        <Checkbox
+          className="beta"
+          label="Full Mortgage"
+          onChange={setFullMortgage}
+        />
+        <ButtonGroup aria-label="Basic example" onClick={(e) => setRoom(e.target.value)}>
+          <Button variant="secondary" value="undefined">مهم نیست</Button>
+          {items}
+        </ButtonGroup>
+        <DoubleSelect
+          options={[{ value: "12", label: "12" }]}
+          title="mortgage"
+          fromTitle="min"
+          toTitle="max"
+        />
 
+      </form>
+    </aside>
   )
 }
 

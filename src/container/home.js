@@ -7,12 +7,12 @@ import HouseListingWrp from '../component/house/houseListingWrp'
 
 function Home() {
   return (
-    <div>
+    <>
       <Header />
       <MapHolder/>
       <HouseListingWrp />
       <Footer />
-    </div>
+    </>
   )
 }
 

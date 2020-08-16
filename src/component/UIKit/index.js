@@ -4,7 +4,7 @@ import Text from './Text/Text';
 import Checkbox from './Checkbox/Checkbox';
 import Switch from "./Switch/Switch";
 import SelectBox from "./SelectBox/SelectBox";
-import Option from "./Option/Option";
+import DoubleSelect from "./doubleSelect/doubleSelect";
 
 
 export {
@@ -14,5 +14,5 @@ export {
   Text,
   Switch,
   SelectBox,
-  Option
+  DoubleSelect
 };

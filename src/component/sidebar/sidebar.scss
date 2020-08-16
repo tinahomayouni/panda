@@ -1,42 +1,89 @@
 aside {
-  display: flex !important;
-  background: #06a7ea;
-  height: 100%;
-  padding: 30px !important;
-  flex-direction: column;
-  margin-left: 30px;
-  border-radius: 5px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 16px 16px 0;
+  box-shadow: 0 0 12px -6px rgba(0, 0, 0, .6);
+  height: auto;
+  overflow-y: hidden;
+
+  p {
+    &:first-child {
+      padding-right: 20px;
+    }
+
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .budgetWrp {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+    span {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:first-child {
+        padding-left: 0px;
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-right: 10px;
+      }
+    }
+
+    .selectWrp {
+      position: relative;
+      width: 200px;
+
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #666;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        pointer-events: none;
+      }
+
+      select {
+        background: #eee;
+        border: 0 !important;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        text-indent: 0.01px;
+        text-overflow: "";
+        font-size: inherit;
+        line-height: inherit;
+        width: 100%;
+        padding-left: 10px;
+
+        &-ms-expand {
+          display: none;
+        }
+      }
+    }
+  }
 
   form {
     display: flex;
     flex-direction: column;
 
-    label {
-      &:first-child {}
-
-    }
-
-    input {
-      border: 1px solid rgba(18, 25, 33, .16);
-      background-color: #f9fafb;
-      border-radius: 6px;
-      padding-right: 40px;
-      padding-top: 10px;
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-    }
-
-    select {
-      border: 0;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-      outline: 0;
-      height: 40px;
-      padding: 6px 8px;
-      font-size: 14px;
-      line-height: 1.42857;
-      color: #555555;
-      background: #fff;
-      margin-bottom: 20px;
+    &:first-child {
+      width: 100%;
+      background-color: rgba(18, 25, 33, .06);
+      padding: 4px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
     }
 
     button {

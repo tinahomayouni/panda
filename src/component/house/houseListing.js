@@ -45,19 +45,17 @@ function HouseListing() {
   }, [filterFromReducer]);
 
   return (
-    <Col xs={8}>
-      <div className="cardHolder">
-        <Row>
-          {filteredData.map(house => {
-            return (
-              <Col xs={4}>
-                <HouseItem house={house} />
-              </Col>
-            )
-          })}
-        </Row>
-      </div>
-    </Col>
+    <div className="cardHolder">
+      <Row>
+        {filteredData.map(house => {
+          return (
+            <Col xs={4}>
+              <HouseItem house={house} />
+            </Col>
+          )
+        })}
+      </Row>
+    </div>
   )
 }
 

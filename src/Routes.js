@@ -4,11 +4,9 @@ import Home from './container/home'
 
 function Routes() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home}></Route>
+    </Switch>
   )
 }
 
