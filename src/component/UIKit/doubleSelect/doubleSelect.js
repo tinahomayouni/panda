@@ -2,11 +2,18 @@ import React from 'react';
 import { SelectBox } from '../index';
 import { Option } from "../SelectBox/SelectBox"
 
+
 export default function doubleSelect(props) {
 
-  console.log(props)
   const handleChange = (value, accessor) => {
-    console.log(value, "value", accessor);
+    console.log(value, 'value', accessor);
+    let data = { min: props.value.min, max: props.value.max };
+    if (accessor === 'min') {
+      data = { min: value, max: data.max };
+    } else {
+      data = { min: data.min, max: value };
+    }
+    props.onChange(data);
   }
   return (
     <div>

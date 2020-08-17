@@ -9,10 +9,12 @@ aside {
   p {
     &:first-child {
       padding-right: 20px;
+      padding: 20px;
+      padding-left: 0;
     }
 
     margin: 0;
-    color: #fff;
+    color: #323232;
     font-weight: bold;
   }
 
@@ -20,6 +22,7 @@ aside {
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    align-items: center;
 
     span {
       padding-left: 10px;
@@ -39,32 +42,28 @@ aside {
       position: relative;
       width: 200px;
 
-      &:after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 6px solid #666;
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        pointer-events: none;
-      }
-
       select {
-        background: #eee;
-        border: 0 !important;
-        border-radius: 0;
+        display: flex;
+        width: 95%;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        text-indent: 0.01px;
-        text-overflow: "";
-        font-size: inherit;
-        line-height: inherit;
-        width: 100%;
-        padding-left: 10px;
+        text-align: right;
+        -moz-text-align-last: right;
+        text-align-last: right;
+        justify-content: right;
+        border: 0;
+        padding: 14px;
+        color: #919399;
+        border: 1px solid rgba(18, 25, 33, .16);
+        border-radius: 6px;
+        background: url(https://cdn2.address.ir/desktop/static/media/arrow-down-range2.9fb2507e.svg),
+          linear-gradient(180deg, #fff, #f9fafb);
+        background-repeat: no-repeat;
+        background-position: center left 0;
+        margin: 1px;
+        cursor: pointer;
+        color: #121921;
 
         &-ms-expand {
           display: none;

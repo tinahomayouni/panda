@@ -22,30 +22,12 @@ export const StyledSwitch = styled.form`
     user-select: none;
     padding: 10px 20px;
     cursor: pointer;
-    will-change: transform;
-    transform: translateZ(0px);
-    transition:
-      transform 125ms ease-in-out,
-      filter 125ms ease-in-out;
-    // filter: blur(.25rem);
     
-    &:hover {
-      transform: scale(1.15);
-      // filter: blur(0px);
-    }
   }
   
   input[type="radio"] {
     display: none;
     
-    // static
-    &#t1 ~ .blob {
-      transform-origin: right center;
-    }
-    
-    &#t2 ~ .blob {
-      transform-origin: left center;
-    }
     
     &#t1:checked {
       
@@ -125,7 +107,7 @@ function Switch(props) {
         name={props.labels[0]}
         value={true}
         type="radio"
-        onClick={(e) => props.onChange(e.target.value)}
+        onChange={(e) => props.onChange(e.target.value)}
 
       />
       <label for="t2">{props.labels[1]}</label>
@@ -135,7 +117,7 @@ function Switch(props) {
         value={false}
         checked
         type="radio"
-        onClick={(e) => props.onChange(e.target.value)}
+        onChange={(e) => props.onChange(e.target.value)}
       />
       <div></div>
     </StyledSwitch>

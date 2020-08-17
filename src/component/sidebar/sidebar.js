@@ -17,21 +17,8 @@ function Sidebar() {
   const [mortgage, setMortgage] = useState({ min: undefined, max: undefined });
 
   const dispatch = useDispatch();
-
+  console.log(hasFilter, 'hasFilter')
   useEffect(() => {
-    setFilters();
-
-  }, [withImageOnly, fullMortgage, room, rent.max, rent.min, mortgage.max, mortgage.min])
-
-
-  const setFilters = () => {
-
-    console.log({
-      budget: {
-        mortgage,
-        rent
-      }
-    })
     dispatch(filterAddress({
       withImageOnly,
       fullMortgage,
@@ -41,12 +28,29 @@ function Sidebar() {
         rent
       }
     }))
-  }
+    console.log(withImageOnly, 'hasFilter')
+    console.log(fullMortgage, 'hasFilter')
+    console.log(room, 'hasFilter')
+
+  }, [withImageOnly, fullMortgage, room, rent.max, rent.min, mortgage.max, mortgage.min])
+
+
+
   const items = [];
+
   for (let i = 0; i < 3; i++) {
     items.push(<Button key={i} variant="secondary" value={i}>{i}</Button>)
   }
 
+
+  const handleChangeDoubleSelectMortgage = (value) => {
+
+    setMortgage(value);
+  }
+  const handleChangeDoubleSelectRent = (value) => {
+
+    setRent(value);
+  }
   return (
     <aside>
       <form>
@@ -60,13 +64,24 @@ function Sidebar() {
           <Button variant="secondary" value="undefined">مهم نیست</Button>
           {items}
         </ButtonGroup>
+
         <DoubleSelect
-          options={[{ value: "12", label: "12" }]}
+          options={[{ value: "12", label: "12" }, { value: "24", label: "24" }]}
+          onChange={handleChangeDoubleSelectMortgage}
+          value={mortgage}
           title="mortgage"
           fromTitle="min"
           toTitle="max"
         />
 
+        <DoubleSelect
+          options={[{ value: "12", label: "12" }, { value: "24", label: "24" }]}
+          onChange={handleChangeDoubleSelectRent}
+          value={rent}
+          title="rent"
+          fromTitle="min"
+          toTitle="max"
+        />
       </form>
     </aside>
   )

@@ -13,7 +13,6 @@ Option.defaultProps = {
 }
 
 export function Option(props) {
-  console.log(props, "props option")
   return (
     <StyledOption {...props} >{props.children}</StyledOption>
   )
