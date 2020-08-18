@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { filterAddress } from '../../redux/addressFilters/action';
-import { Input, Checkbox, Switch, DoubleSelect } from '../UIKit';
+import { filterAddress } from '../../redux/housesReducer/action';
+import { Checkbox, Switch, DoubleSelect } from '../UIKit';
 import { ButtonGroup, Button } from 'react-bootstrap'
 import "./sidebar.scss"
 
 
 
 function Sidebar() {
-  const { filters: hasFilter } = useSelector(state => state.reducerAddress)
-  const [withImageOnly, setWithImageOnly] = useState(false);
+  const { filters: hasFilter } = useSelector(state => state.housesReducer)
+  const [image, setImage] = useState(false);
   const [fullMortgage, setFullMortgage] = useState(false);
 
   const [room, setRoom] = useState(undefined);
@@ -20,7 +20,7 @@ function Sidebar() {
   console.log(hasFilter, 'hasFilter')
   useEffect(() => {
     dispatch(filterAddress({
-      withImageOnly,
+      image,
       fullMortgage,
       room,
       budget: {
@@ -28,11 +28,8 @@ function Sidebar() {
         rent
       }
     }))
-    console.log(withImageOnly, 'hasFilter')
-    console.log(fullMortgage, 'hasFilter')
-    console.log(room, 'hasFilter')
 
-  }, [withImageOnly, fullMortgage, room, rent.max, rent.min, mortgage.max, mortgage.min])
+  }, [image, fullMortgage, room, rent.max, rent.min, mortgage.max, mortgage.min])
 
 
 
@@ -54,7 +51,7 @@ function Sidebar() {
   return (
     <aside>
       <form>
-        <Switch labels={["with pic", 'no']} onChange={setWithImageOnly} />
+        <Switch labels={["with pic", 'no']} onChange={setImage} />
         <Checkbox
           className="beta"
           label="Full Mortgage"
@@ -73,7 +70,6 @@ function Sidebar() {
           fromTitle="min"
           toTitle="max"
         />
-
         <DoubleSelect
           options={[{ value: "12", label: "12" }, { value: "24", label: "24" }]}
           onChange={handleChangeDoubleSelectRent}

@@ -16,7 +16,7 @@ function HouseItem(props) {
         <h4>{props.house.category}</h4>
         <div className="options">
           <div>
-            <FontAwesomeIcon icon={faVectorSquare} /><span>{props.house.squareFootage}</span>
+            <FontAwesomeIcon icon={faVectorSquare} /><span>{props.house.area}</span>
           </div>
           <div className="rightOption">
             <FontAwesomeIcon icon={faBath} />

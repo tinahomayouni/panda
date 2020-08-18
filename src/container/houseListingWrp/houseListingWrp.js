@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import HouseListing from './houseListing';
-import Sidebar from '../sidebar/sidebar';
-import './house.scss'
+import HouseListing from '../../component/house/houseListing';
+import Sidebar from '../../component/sidebar/sidebar';
+import '../../component/house/house.scss'
 
 
 

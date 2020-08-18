@@ -4,60 +4,126 @@
       "id": 1,
       "title": "South Mervin Boulevard",
       "category": "House",
-      "squareFootage": "172 sqft",
+      "area": "172 sqft",
       "featured": "featured",
-      "image": "home.jpg",
+      "image": null,
       "alt": "image from Home",
-      "option": [{ "room": 4 }],
-      "price": 5.11
+      "option": [{ "room": 2 }],
+      "price": 5.11,
+      "budget": {
+        "rent": {
+          "min": "12",
+          "max": "24"
+        },
+        "mortgage": {
+          "min": "12",
+          "max": "24"
+        }
+      },
+      "fullMortgage": false
     },
     {
       "id": 2,
       "title": "North Parchmore Street",
       "category": "Apartment",
-      "squareFootage": "155 sqft",
+      "area": "155 sqft",
       "featured": "featured",
       "image": "home.jpg",
-      "option": [{ "shower": 2 }, { "room": 3 }],
-      "price": 18.58099
+      "option": [{ "shower": 2 }, { "room": 2 }],
+      "price": 18.58099,
+      "budget": {
+        "rent": {
+          "min": "12",
+          "max": "24"
+        },
+        "mortgage": {
+          "min": "24",
+          "max": "36"
+        }
+      },
+      "fullMortgage": true
     },
     {
       "id": 3,
       "category": "Building area",
       "title": "Apricot West Britford Arch",
-      "squareFootage": "180 sqft",
+      "area": "180 sqft",
       "image": "home.jpg",
       "option": [{ "shower": 1 }, { "room": 2 }],
-      "price": 1098708.58
+      "price": 1098708.58,
+      "budget": {
+        "rent": {
+          "min": "24",
+          "max": "36"
+        },
+        "mortgage": {
+          "min": "12",
+          "max": "24"
+        }
+      },
+      "fullMortgage": false
     },
     {
       "id": 4,
       "title": "South Celler Court",
       "category": "villa",
-      "squareFootage": "230 sqft",
+      "area": "230 sqft",
       "featured": "featured",
       "image": "home.jpg",
       "option": [{ "room": 3 }],
-      "price": 35442.58
+      "price": 35442.58,
+      "budget": {
+        "rent": {
+          "min": "12",
+          "max": "24"
+        },
+        "mortgage": {
+          "min": "12",
+          "max": "24"
+        }
+      },
+      "fullMortgage": true
     },
     {
       "id": 5,
       "category": "villa",
       "title": "Ely Parkway",
-      "squareFootage": "470 sqft",
+      "area": "470 sqft",
       "featured": "featured",
       "image": "home.jpg",
-      "option": [{ "shower": 2 }, { "room": 4 }],
-      "price": 45.58
+      "option": [{ "shower": 2 }, { "room": 1 }],
+      "price": 45.58,
+      "budget": {
+        "rent": {
+          "min": "24",
+          "max": "12"
+        },
+        "mortgage": {
+          "min": "12",
+          "max": "24"
+        }
+      },
+      "fullMortgage": true
     },
     {
       "id": 5,
       "category": "Apartment",
       "title": "Eaton Garth",
-      "squareFootage": "150 sqft",
+      "area": "150 sqft",
       "image": "home.jpg",
-      "option": [{ "shower": 2 }, { "room": 3 }],
-      "price": 45.58
+      "option": [{ "shower": 2 }, { "room": 1 }],
+      "price": 45.58,
+      "budget": {
+        "rent": {
+          "min": "12",
+          "max": "24"
+        },
+        "mortgage": {
+          "min": "12",
+          "max": "24"
+        }
+      },
+      "fullMortgage": false
     }
   ]
 }
