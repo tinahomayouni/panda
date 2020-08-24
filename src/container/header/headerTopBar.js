@@ -11,7 +11,7 @@ function HeaderTopBar() {
           <ul className="navbarWrp">
             <li><Link to="/">Pricing</Link></li>
             <li><Link to="/">Register</Link></li>
-            <li><Link to="/">Login</Link></li>
+            <li><Link to="/login">Login</Link></li>
           </ul>
         </Col>
       </Row>

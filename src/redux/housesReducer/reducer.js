@@ -53,8 +53,9 @@ function filterHouses(filters, houses) {
           if (filters.image) {
             return filteredData = filteredData.filter(house => {
               if (house.image) return house;
+              else return filteredData
             })
-          }
+          } 
           break;
         }
       case 'room':
@@ -67,7 +68,6 @@ function filterHouses(filters, houses) {
               }, {})
               if (naturalOptions.room == filters.room) {
                 console.log("heres");
-
                 return house;
               }
             })

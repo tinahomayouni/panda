@@ -48,10 +48,10 @@ aside {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        text-align: right;
-        -moz-text-align-last: right;
-        text-align-last: right;
-        justify-content: right;
+        text-align: center;
+        -moz-text-align-last: center;
+        text-align-last: center;
+        justify-content: center;
         border: 0;
         padding: 14px;
         color: #919399;
@@ -92,6 +92,7 @@ aside {
       line-height: 1.42857;
       border: 1px solid #0f4562;
       padding: 10px;
+
     }
   }
 }

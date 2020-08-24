@@ -11,7 +11,6 @@ function Sidebar() {
   const { filters: hasFilter } = useSelector(state => state.housesReducer)
   const [image, setImage] = useState(false);
   const [fullMortgage, setFullMortgage] = useState(false);
-
   const [room, setRoom] = useState(undefined);
   const [rent, setRent] = useState({ min: undefined, max: undefined });
   const [mortgage, setMortgage] = useState({ min: undefined, max: undefined });
@@ -41,11 +40,9 @@ function Sidebar() {
 
 
   const handleChangeDoubleSelectMortgage = (value) => {
-
     setMortgage(value);
   }
   const handleChangeDoubleSelectRent = (value) => {
-
     setRent(value);
   }
   return (
@@ -57,6 +54,7 @@ function Sidebar() {
           label="Full Mortgage"
           onChange={setFullMortgage}
         />
+
         <ButtonGroup aria-label="Basic example" onClick={(e) => setRoom(e.target.value)}>
           <Button variant="secondary" value="undefined">مهم نیست</Button>
           {items}
@@ -82,5 +80,6 @@ function Sidebar() {
     </aside>
   )
 }
+
 
 export default Sidebar;

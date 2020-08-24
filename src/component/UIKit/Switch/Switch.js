@@ -108,7 +108,6 @@ function Switch(props) {
         value={true}
         type="radio"
         onChange={(e) => props.onChange(e.target.value)}
-
       />
       <label for="t2">{props.labels[1]}</label>
       <input
