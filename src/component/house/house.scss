@@ -26,7 +26,6 @@ $blue:#337ab7;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
 
-
         span {
           background-color: $grayDark;
           bottom: 15px;
@@ -36,6 +35,24 @@ $blue:#337ab7;
           line-height: 1;
           padding: 8px 12px;
           position: absolute;
+        }
+
+        .featured {
+          background-color: #fff;
+          border-radius: 0;
+          color: #313131;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1;
+          padding: 8px 12px;
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          bottom: auto;
+        }
+
+        .noFeatured {
+          display: none;
         }
 
         img {
@@ -70,8 +87,8 @@ $blue:#337ab7;
           justify-content: space-between;
 
           .rightOption {
-            svg:last-child {
-              background: red;
+            .bathQuantity {
+              padding-right: 15px;
             }
           }
 
@@ -91,6 +108,29 @@ $blue:#337ab7;
   }
 
   aside {
-    background: red;
+    padding: 0;
+
+    form {
+      padding: 10px;
+
+      .btn-secondary.focus,
+      .btn-secondary:focus {
+        background: #121921;
+        font-weight: 700;
+        color: #fff;
+        box-shadow: 0 2px 6px rgba(18, 25, 33, .16);
+
+      }
+
+      button {
+        padding: 4px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }

@@ -1,19 +1,18 @@
 import React from 'react'
 import Header from './header/header'
 import Footer from './footer'
-// import MapHolder from '../component/map/mapHolder'
-import Card from '../component/card/card'
+import MapHolder from '../component/map/mapHolder'
+import HouseListingWrp from './houseListingWrp/houseListingWrp'
 
 
 function Home() {
   return (
-    <div>
+    <>
       <Header />
-
-      {/* <MapHolder/> */}
-      <Card />
+      <MapHolder/>
+      <HouseListingWrp />
       <Footer />
-    </div>
+    </>
   )
 }
 

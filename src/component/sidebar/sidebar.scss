@@ -1,0 +1,116 @@
+aside {
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 16px 16px 0;
+  box-shadow: 0 0 12px -6px rgba(0, 0, 0, .6);
+  height: auto;
+  overflow-y: hidden;
+
+  p {
+    &:first-child {
+      padding-right: 20px;
+      padding: 20px;
+      padding-left: 0;
+    }
+
+    margin: 0;
+    color: #323232;
+    font-weight: bold;
+  }
+
+  .budgetWrp {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    align-items: center;
+
+    span {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:first-child {
+        padding-left: 0px;
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-right: 10px;
+      }
+    }
+
+    .selectWrp {
+      position: relative;
+      width: 200px;
+
+      select {
+        display: flex;
+        width: 95%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        text-align: center;
+        -moz-text-align-last: center;
+        text-align-last: center;
+        justify-content: center;
+        border: 0;
+        padding: 14px;
+        color: #919399;
+        border: 1px solid rgba(18, 25, 33, .16);
+        border-radius: 6px;
+        background: url(https://cdn2.address.ir/desktop/static/media/arrow-down-range2.9fb2507e.svg),
+          linear-gradient(180deg, #fff, #f9fafb);
+        background-repeat: no-repeat;
+        background-position: center left 0;
+        margin: 1px;
+        cursor: pointer;
+        color: #121921;
+
+        &-ms-expand {
+          display: none;
+        }
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      width: 100%;
+      background-color: rgba(18, 25, 33, .06);
+      padding: 4px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      background: #034563;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.42857;
+      border: 1px solid #0f4562;
+      padding: 10px;
+
+    }
+  }
+}
+
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: red;
+  padding-left: 20px;
+}
+
+::-ms-input-placeholder {
+  /* Internet Explorer */
+  color: red;
+  padding-left: 20px;
+}
+
+::placeholder {
+  color: red;
+  padding-left: 20px;
+}
